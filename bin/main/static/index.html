@@ -1,0 +1,44 @@
+<html>
+    <head>
+    <meta charset="UTF8">
+    <title>Greeting</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+        <form method="get" action="/calc">
+            <input name="one">
+            <input name="two">
+            <select name="operator">
+                <option value="p">+</option>
+                <option value="m">-</option>
+                <option value="t">*</option>
+                <option value="d">/</option>
+            </select>
+            <button>SUBMIT</button>
+        </form>
+
+        <hr>
+        <br>
+
+        <input id="one">
+        <input id="two">
+        <select id="operator">
+            <option value="p">+</option>
+            <option value="m">-</option>
+            <option value="t">*</option>
+            <option value="d">/</option>
+        </select>
+
+        <button onclick="send()">SUBMIT</button>
+        
+        <script>
+            function send(){
+                let say = $("#one").val();
+                let to = $("#two").val();
+                let oper = $("#operator").val()
+                location.href="calc1/" + say + "/" + to + "/" + oper;
+            }
+        </script>
+
+    <body>
+    </body>
+</html>
